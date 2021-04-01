@@ -1,0 +1,1138 @@
+{
+  "/Users/felipe/Projetos/trakto/graphics-resources/src/index.ts": {
+    "path": "/Users/felipe/Projetos/trakto/graphics-resources/src/index.ts",
+    "statementMap": {
+      "0": {
+        "start": { "line": 1, "column": 0 },
+        "end": { "line": 1, "column": 25 }
+      },
+      "1": {
+        "start": { "line": 2, "column": 0 },
+        "end": { "line": 2, "column": 29 }
+      }
+    },
+    "fnMap": {},
+    "branchMap": {},
+    "s": { "0": 0, "1": 0 },
+    "f": {},
+    "b": {}
+  },
+  "/Users/felipe/Projetos/trakto/graphics-resources/src/api/flaticon/configuration.ts": {
+    "path": "/Users/felipe/Projetos/trakto/graphics-resources/src/api/flaticon/configuration.ts",
+    "statementMap": {
+      "0": {
+        "start": { "line": 1, "column": 0 },
+        "end": { "line": 1, "column": 42 }
+      },
+      "1": {
+        "start": { "line": 2, "column": 0 },
+        "end": { "line": 2, "column": 26 }
+      },
+      "2": {
+        "start": { "line": 3, "column": 0 },
+        "end": { "line": 3, "column": 37 }
+      },
+      "3": {
+        "start": { "line": 4, "column": 0 },
+        "end": { "line": 4, "column": 40 }
+      },
+      "4": {
+        "start": { "line": 6, "column": 0 },
+        "end": { "line": 6, "column": null }
+      },
+      "5": {
+        "start": { "line": 6, "column": 32 },
+        "end": { "line": 6, "column": 41 }
+      },
+      "6": {
+        "start": { "line": 25, "column": 2 },
+        "end": { "line": 29, "column": null }
+      },
+      "7": {
+        "start": { "line": 26, "column": 19 },
+        "end": { "line": 26, "column": 51 }
+      },
+      "8": {
+        "start": { "line": 27, "column": 4 },
+        "end": { "line": 27, "column": 42 }
+      },
+      "9": {
+        "start": { "line": 28, "column": 4 },
+        "end": { "line": 28, "column": 18 }
+      },
+      "10": {
+        "start": { "line": 34, "column": 22 },
+        "end": { "line": 50, "column": null }
+      },
+      "11": {
+        "start": { "line": 35, "column": 8 },
+        "end": { "line": 35, "column": 12 }
+      },
+      "12": {
+        "start": { "line": 36, "column": 6 },
+        "end": { "line": 36, "column": 40 }
+      },
+      "13": {
+        "start": { "line": 39, "column": 4 },
+        "end": { "line": 42, "column": 6 }
+      },
+      "14": {
+        "start": { "line": 44, "column": 10 },
+        "end": { "line": 44, "column": 52 }
+      },
+      "15": {
+        "start": { "line": 45, "column": 4 },
+        "end": { "line": 48, "column": 7 }
+      },
+      "16": {
+        "start": { "line": 49, "column": 4 },
+        "end": { "line": 49, "column": 18 }
+      },
+      "17": {
+        "start": { "line": 55, "column": 23 },
+        "end": { "line": 64, "column": null }
+      },
+      "18": {
+        "start": { "line": 56, "column": 12 },
+        "end": { "line": 56, "column": 32 }
+      },
+      "19": {
+        "start": { "line": 58, "column": 6 },
+        "end": { "line": 60, "column": null }
+      },
+      "20": {
+        "start": { "line": 57, "column": 10 },
+        "end": { "line": 61, "column": null }
+      },
+      "21": {
+        "start": { "line": 62, "column": 4 },
+        "end": { "line": 62, "column": 38 }
+      },
+      "22": {
+        "start": { "line": 63, "column": 4 },
+        "end": { "line": 63, "column": 49 }
+      },
+      "23": {
+        "start": { "line": 70, "column": 17 },
+        "end": { "line": 72, "column": null }
+      },
+      "24": {
+        "start": { "line": 71, "column": 4 },
+        "end": { "line": 71, "column": 69 }
+      },
+      "25": {
+        "start": { "line": 80, "column": 17 },
+        "end": { "line": 87, "column": null }
+      },
+      "26": {
+        "start": { "line": 81, "column": 4 },
+        "end": { "line": 84, "column": null }
+      },
+      "27": {
+        "start": { "line": 82, "column": 6 },
+        "end": { "line": 82, "column": 40 }
+      },
+      "28": {
+        "start": { "line": 83, "column": 6 },
+        "end": { "line": 83, "column": 18 }
+      },
+      "29": {
+        "start": { "line": 86, "column": 4 },
+        "end": { "line": 86, "column": 17 }
+      },
+      "30": {
+        "start": { "line": 7, "column": 17 },
+        "end": { "line": 7, "column": 36 }
+      },
+      "31": {
+        "start": { "line": 9, "column": 17 },
+        "end": { "line": 9, "column": 30 }
+      },
+      "32": {
+        "start": { "line": 11, "column": 17 },
+        "end": { "line": 15, "column": 4 }
+      },
+      "33": {
+        "start": { "line": 17, "column": 17 },
+        "end": { "line": 20, "column": 4 }
+      },
+      "34": {
+        "start": { "line": 19, "column": 32 },
+        "end": { "line": 19, "column": null }
+      },
+      "35": {
+        "start": { "line": 88, "column": 0 },
+        "end": { "line": 88, "column": null }
+      },
+      "36": {
+        "start": { "line": 6, "column": 13 },
+        "end": { "line": 6, "column": 23 }
+      },
+      "37": {
+        "start": { "line": 90, "column": 0 },
+        "end": { "line": 90, "column": 47 }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_22)",
+        "decl": {
+          "start": { "line": 6, "column": 0 },
+          "end": { "line": 6, "column": 13 }
+        },
+        "loc": {
+          "start": { "line": 6, "column": 0 },
+          "end": { "line": 6, "column": 13 }
+        }
+      },
+      "1": {
+        "name": "(anonymous_24)",
+        "decl": {
+          "start": { "line": 25, "column": 2 },
+          "end": { "line": 25, "column": 20 }
+        },
+        "loc": {
+          "start": { "line": 25, "column": 2 },
+          "end": { "line": 29, "column": 3 }
+        }
+      },
+      "2": {
+        "name": "(anonymous_25)",
+        "decl": {
+          "start": { "line": 34, "column": 2 },
+          "end": { "line": 34, "column": 22 }
+        },
+        "loc": {
+          "start": { "line": 34, "column": 2 },
+          "end": { "line": 50, "column": null }
+        }
+      },
+      "3": {
+        "name": "(anonymous_28)",
+        "decl": {
+          "start": { "line": 55, "column": 2 },
+          "end": { "line": 55, "column": 23 }
+        },
+        "loc": {
+          "start": { "line": 55, "column": 2 },
+          "end": { "line": 64, "column": null }
+        }
+      },
+      "4": {
+        "name": "(anonymous_31)",
+        "decl": {
+          "start": { "line": 70, "column": 2 },
+          "end": { "line": 70, "column": 17 }
+        },
+        "loc": {
+          "start": { "line": 70, "column": 2 },
+          "end": { "line": 72, "column": 3 }
+        }
+      },
+      "5": {
+        "name": "(anonymous_32)",
+        "decl": {
+          "start": { "line": 80, "column": 2 },
+          "end": { "line": 80, "column": 17 }
+        },
+        "loc": {
+          "start": { "line": 80, "column": 43 },
+          "end": { "line": 87, "column": 3 }
+        }
+      },
+      "6": {
+        "name": "(anonymous_33)",
+        "decl": {
+          "start": { "line": 19, "column": 16 },
+          "end": { "line": 19, "column": 17 }
+        },
+        "loc": {
+          "start": { "line": 19, "column": 27 },
+          "end": { "line": 19, "column": 37 }
+        }
+      }
+    },
+    "branchMap": {
+      "0": {
+        "loc": {
+          "start": { "line": 35, "column": 8 },
+          "end": { "line": 35, "column": 12 }
+        },
+        "type": "if",
+        "locations": [
+          {
+            "start": { "line": 35, "column": 8 },
+            "end": { "line": 35, "column": 12 }
+          },
+          {
+            "start": { "line": 35, "column": 8 },
+            "end": { "line": 35, "column": 12 }
+          }
+        ]
+      },
+      "1": {
+        "loc": {
+          "start": { "line": 71, "column": 25 },
+          "end": { "line": 71, "column": 61 }
+        },
+        "type": "cond-expr",
+        "locations": [
+          {
+            "start": { "line": 71, "column": 25 },
+            "end": { "line": 71, "column": 61 }
+          },
+          {
+            "start": { "line": 71, "column": 64 },
+            "end": { "line": 71, "column": 68 }
+          }
+        ]
+      },
+      "2": {
+        "loc": {
+          "start": { "line": 81, "column": 4 },
+          "end": { "line": 84, "column": null }
+        },
+        "type": "if",
+        "locations": [
+          {
+            "start": { "line": 81, "column": 4 },
+            "end": { "line": 84, "column": null }
+          },
+          {
+            "start": { "line": 81, "column": 4 },
+            "end": { "line": 84, "column": null }
+          }
+        ]
+      }
+    },
+    "s": {
+      "0": 1,
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 1,
+      "5": 1,
+      "6": 1,
+      "7": 0,
+      "8": 0,
+      "9": 0,
+      "10": 1,
+      "11": 0,
+      "12": 0,
+      "13": 0,
+      "14": 0,
+      "15": 0,
+      "16": 0,
+      "17": 1,
+      "18": 0,
+      "19": 0,
+      "20": 0,
+      "21": 0,
+      "22": 0,
+      "23": 1,
+      "24": 0,
+      "25": 1,
+      "26": 0,
+      "27": 0,
+      "28": 0,
+      "29": 0,
+      "30": 1,
+      "31": 1,
+      "32": 1,
+      "33": 1,
+      "34": 0,
+      "35": 1,
+      "36": 1,
+      "37": 1
+    },
+    "f": { "0": 2, "1": 0, "2": 0, "3": 0, "4": 0, "5": 0, "6": 0 },
+    "b": { "0": [0, 0], "1": [0, 0], "2": [0, 0] }
+  },
+  "/Users/felipe/Projetos/trakto/graphics-resources/src/api/flaticon/environment.ts": {
+    "path": "/Users/felipe/Projetos/trakto/graphics-resources/src/api/flaticon/environment.ts",
+    "statementMap": {
+      "0": {
+        "start": { "line": 1, "column": 13 },
+        "end": { "line": 4, "column": 2 }
+      },
+      "1": {
+        "start": { "line": 6, "column": 13 },
+        "end": { "line": 9, "column": 2 }
+      },
+      "2": {
+        "start": { "line": 11, "column": 0 },
+        "end": { "line": 11, "column": 27 }
+      }
+    },
+    "fnMap": {},
+    "branchMap": {},
+    "s": { "0": 1, "1": 1, "2": 1 },
+    "f": {},
+    "b": {}
+  },
+  "/Users/felipe/Projetos/trakto/graphics-resources/src/api/flaticon/flaticon.service.ts": {
+    "path": "/Users/felipe/Projetos/trakto/graphics-resources/src/api/flaticon/flaticon.service.ts",
+    "statementMap": {
+      "0": {
+        "start": { "line": 1, "column": 0 },
+        "end": { "line": 1, "column": 42 }
+      },
+      "1": {
+        "start": { "line": 3, "column": 0 },
+        "end": { "line": 3, "column": 45 }
+      },
+      "2": {
+        "start": { "line": 5, "column": 0 },
+        "end": { "line": 5, "column": null }
+      },
+      "3": {
+        "start": { "line": 5, "column": 23 },
+        "end": { "line": 5, "column": 32 }
+      },
+      "4": {
+        "start": { "line": 7, "column": 4 },
+        "end": { "line": 7, "column": null }
+      },
+      "5": {
+        "start": { "line": 20, "column": 15 },
+        "end": { "line": 48, "column": null }
+      },
+      "6": {
+        "start": { "line": 27, "column": 10 },
+        "end": { "line": 27, "column": 31 }
+      },
+      "7": {
+        "start": { "line": 29, "column": 6 },
+        "end": { "line": 29, "column": null }
+      },
+      "8": {
+        "start": { "line": 31, "column": 10 },
+        "end": { "line": 37, "column": 6 }
+      },
+      "9": {
+        "start": { "line": 39, "column": 24 },
+        "end": { "line": 39, "column": null }
+      },
+      "10": {
+        "start": { "line": 39, "column": 10 },
+        "end": { "line": 39, "column": null }
+      },
+      "11": {
+        "start": { "line": 40, "column": 21 },
+        "end": { "line": 42, "column": null }
+      },
+      "12": {
+        "start": { "line": 40, "column": 10 },
+        "end": { "line": 42, "column": null }
+      },
+      "13": {
+        "start": { "line": 44, "column": 4 },
+        "end": { "line": 47, "column": 6 }
+      },
+      "14": {
+        "start": { "line": 55, "column": 10 },
+        "end": { "line": 67, "column": null }
+      },
+      "15": {
+        "start": { "line": 56, "column": 4 },
+        "end": { "line": 66, "column": 8 }
+      },
+      "16": {
+        "start": { "line": 56, "column": 28 },
+        "end": { "line": 66, "column": 7 }
+      },
+      "17": {
+        "start": { "line": 68, "column": 0 },
+        "end": { "line": 68, "column": null }
+      },
+      "18": {
+        "start": { "line": 70, "column": 0 },
+        "end": { "line": 70, "column": 43 }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_19)",
+        "decl": {
+          "start": { "line": 5, "column": 0 },
+          "end": { "line": 5, "column": 23 }
+        },
+        "loc": {
+          "start": { "line": 5, "column": 0 },
+          "end": { "line": 68, "column": null }
+        }
+      },
+      "1": {
+        "name": "Flaticon",
+        "decl": {
+          "start": { "line": 6, "column": 2 },
+          "end": { "line": 6, "column": null }
+        },
+        "loc": {
+          "start": { "line": 6, "column": 2 },
+          "end": { "line": 8, "column": 3 }
+        }
+      },
+      "2": {
+        "name": "(anonymous_21)",
+        "decl": {
+          "start": { "line": 20, "column": 2 },
+          "end": { "line": 20, "column": 15 }
+        },
+        "loc": {
+          "start": { "line": 26, "column": 3 },
+          "end": { "line": 48, "column": null }
+        }
+      },
+      "3": {
+        "name": "(anonymous_24)",
+        "decl": {
+          "start": { "line": 55, "column": 2 },
+          "end": { "line": 55, "column": 10 }
+        },
+        "loc": {
+          "start": { "line": 55, "column": 39 },
+          "end": { "line": 67, "column": 3 }
+        }
+      },
+      "4": {
+        "name": "(anonymous_25)",
+        "decl": {
+          "start": { "line": 56, "column": 20 },
+          "end": { "line": 56, "column": 24 }
+        },
+        "loc": {
+          "start": { "line": 56, "column": 24 },
+          "end": { "line": 56, "column": 29 }
+        }
+      }
+    },
+    "branchMap": {
+      "0": {
+        "loc": {
+          "start": { "line": 7, "column": 4 },
+          "end": { "line": 7, "column": 11 }
+        },
+        "type": "binary-expr",
+        "locations": [
+          {
+            "start": { "line": 7, "column": 4 },
+            "end": { "line": 7, "column": 11 }
+          },
+          {
+            "start": { "line": 7, "column": 11 },
+            "end": { "line": 7, "column": null }
+          }
+        ]
+      },
+      "1": {
+        "loc": {
+          "start": { "line": 33, "column": 12 },
+          "end": { "line": 33, "column": 16 }
+        },
+        "type": "binary-expr",
+        "locations": [
+          {
+            "start": { "line": 33, "column": 12 },
+            "end": { "line": 33, "column": 16 }
+          },
+          {
+            "start": { "line": 33, "column": 20 },
+            "end": { "line": 33, "column": 21 }
+          }
+        ]
+      },
+      "2": {
+        "loc": {
+          "start": { "line": 34, "column": 13 },
+          "end": { "line": 34, "column": 18 }
+        },
+        "type": "binary-expr",
+        "locations": [
+          {
+            "start": { "line": 34, "column": 13 },
+            "end": { "line": 34, "column": 18 }
+          },
+          {
+            "start": { "line": 34, "column": 22 },
+            "end": { "line": 34, "column": 24 }
+          }
+        ]
+      },
+      "3": {
+        "loc": {
+          "start": { "line": 35, "column": 13 },
+          "end": { "line": 35, "column": 18 }
+        },
+        "type": "binary-expr",
+        "locations": [
+          {
+            "start": { "line": 35, "column": 13 },
+            "end": { "line": 35, "column": 18 }
+          },
+          {
+            "start": { "line": 35, "column": 22 },
+            "end": { "line": 35, "column": 23 }
+          }
+        ]
+      },
+      "4": {
+        "loc": {
+          "start": { "line": 36, "column": 14 },
+          "end": { "line": 36, "column": 20 }
+        },
+        "type": "binary-expr",
+        "locations": [
+          {
+            "start": { "line": 36, "column": 14 },
+            "end": { "line": 36, "column": 20 }
+          },
+          {
+            "start": { "line": 36, "column": 24 },
+            "end": { "line": 36, "column": 25 }
+          }
+        ]
+      }
+    },
+    "s": {
+      "0": 1,
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 1,
+      "5": 1,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0,
+      "10": 0,
+      "11": 0,
+      "12": 0,
+      "13": 0,
+      "14": 1,
+      "15": 0,
+      "16": 0,
+      "17": 1,
+      "18": 1
+    },
+    "f": { "0": 1, "1": 1, "2": 0, "3": 0, "4": 0 },
+    "b": { "0": [1, 1], "1": [0, 0], "2": [0, 0], "3": [0, 0], "4": [0, 0] }
+  },
+  "/Users/felipe/Projetos/trakto/graphics-resources/src/api/flaticon/index.ts": {
+    "path": "/Users/felipe/Projetos/trakto/graphics-resources/src/api/flaticon/index.ts",
+    "statementMap": {
+      "0": {
+        "start": { "line": 1, "column": 0 },
+        "end": { "line": 1, "column": 9 }
+      },
+      "1": {
+        "start": { "line": 1, "column": 9 },
+        "end": { "line": 1, "column": 28 }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_1)",
+        "decl": {
+          "start": { "line": 1, "column": 9 },
+          "end": { "line": 1, "column": 16 }
+        },
+        "loc": {
+          "start": { "line": 1, "column": 9 },
+          "end": { "line": 1, "column": 28 }
+        }
+      }
+    },
+    "branchMap": {},
+    "s": { "0": 1, "1": 3 },
+    "f": { "0": 2 },
+    "b": {}
+  },
+  "/Users/felipe/Projetos/trakto/graphics-resources/src/enums/icon.enum.ts": {
+    "path": "/Users/felipe/Projetos/trakto/graphics-resources/src/enums/icon.enum.ts",
+    "statementMap": {
+      "0": {
+        "start": { "line": 1, "column": 0 },
+        "end": { "line": 1, "column": null }
+      },
+      "1": {
+        "start": { "line": 2, "column": 2 },
+        "end": { "line": 2, "column": null }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": {
+          "start": { "line": 1, "column": 0 },
+          "end": { "line": 1, "column": 12 }
+        },
+        "loc": {
+          "start": { "line": 1, "column": 32 },
+          "end": { "line": 3, "column": 1 }
+        }
+      }
+    },
+    "branchMap": {
+      "0": {
+        "loc": {
+          "start": { "line": 1, "column": 12 },
+          "end": { "line": 1, "column": 32 }
+        },
+        "type": "binary-expr",
+        "locations": [
+          {
+            "start": { "line": 1, "column": 12 },
+            "end": { "line": 1, "column": 32 }
+          },
+          {
+            "start": { "line": 1, "column": 12 },
+            "end": { "line": 1, "column": null }
+          }
+        ]
+      }
+    },
+    "s": { "0": 0, "1": 0 },
+    "f": { "0": 0 },
+    "b": { "0": [0, 0] }
+  },
+  "/Users/felipe/Projetos/trakto/graphics-resources/src/interfaces/index.ts": {
+    "path": "/Users/felipe/Projetos/trakto/graphics-resources/src/interfaces/index.ts",
+    "statementMap": {
+      "0": {
+        "start": { "line": 1, "column": 0 },
+        "end": { "line": 1, "column": 33 }
+      }
+    },
+    "fnMap": {},
+    "branchMap": {},
+    "s": { "0": 0 },
+    "f": {},
+    "b": {}
+  },
+  "/Users/felipe/Projetos/trakto/graphics-resources/src/models/index.ts": {
+    "path": "/Users/felipe/Projetos/trakto/graphics-resources/src/models/index.ts",
+    "statementMap": {
+      "0": {
+        "start": { "line": 1, "column": 0 },
+        "end": { "line": 1, "column": 24 }
+      }
+    },
+    "fnMap": {},
+    "branchMap": {},
+    "s": { "0": 0 },
+    "f": {},
+    "b": {}
+  },
+  "/Users/felipe/Projetos/trakto/graphics-resources/src/models/gifs/gif.service.ts": {
+    "path": "/Users/felipe/Projetos/trakto/graphics-resources/src/models/gifs/gif.service.ts",
+    "statementMap": {
+      "0": {
+        "start": { "line": 1, "column": 0 },
+        "end": { "line": 1, "column": 42 }
+      },
+      "1": {
+        "start": { "line": 3, "column": 0 },
+        "end": { "line": 3, "column": null }
+      },
+      "2": {
+        "start": { "line": 3, "column": 25 },
+        "end": { "line": 3, "column": 34 }
+      },
+      "3": {
+        "start": { "line": 5, "column": 4 },
+        "end": { "line": 5, "column": null }
+      },
+      "4": {
+        "start": { "line": 7, "column": 0 },
+        "end": { "line": 7, "column": null }
+      },
+      "5": {
+        "start": { "line": 9, "column": 0 },
+        "end": { "line": 9, "column": 47 }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_6)",
+        "decl": {
+          "start": { "line": 3, "column": 0 },
+          "end": { "line": 3, "column": 25 }
+        },
+        "loc": {
+          "start": { "line": 3, "column": 0 },
+          "end": { "line": 7, "column": null }
+        }
+      },
+      "1": {
+        "name": "GifService",
+        "decl": {
+          "start": { "line": 4, "column": 2 },
+          "end": { "line": 4, "column": null }
+        },
+        "loc": {
+          "start": { "line": 4, "column": 2 },
+          "end": { "line": 6, "column": 3 }
+        }
+      }
+    },
+    "branchMap": {
+      "0": {
+        "loc": {
+          "start": { "line": 5, "column": 4 },
+          "end": { "line": 5, "column": 11 }
+        },
+        "type": "binary-expr",
+        "locations": [
+          {
+            "start": { "line": 5, "column": 4 },
+            "end": { "line": 5, "column": 11 }
+          },
+          {
+            "start": { "line": 5, "column": 11 },
+            "end": { "line": 5, "column": null }
+          }
+        ]
+      }
+    },
+    "s": { "0": 0, "1": 0, "2": 0, "3": 0, "4": 0, "5": 0 },
+    "f": { "0": 0, "1": 0 },
+    "b": { "0": [0, 0] }
+  },
+  "/Users/felipe/Projetos/trakto/graphics-resources/src/models/gifs/index.ts": {
+    "path": "/Users/felipe/Projetos/trakto/graphics-resources/src/models/gifs/index.ts",
+    "statementMap": {
+      "0": {
+        "start": { "line": 1, "column": 0 },
+        "end": { "line": 1, "column": 9 }
+      },
+      "1": {
+        "start": { "line": 1, "column": 9 },
+        "end": { "line": 1, "column": 30 }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_1)",
+        "decl": {
+          "start": { "line": 1, "column": 9 },
+          "end": { "line": 1, "column": 16 }
+        },
+        "loc": {
+          "start": { "line": 1, "column": 9 },
+          "end": { "line": 1, "column": 30 }
+        }
+      }
+    },
+    "branchMap": {},
+    "s": { "0": 0, "1": 0 },
+    "f": { "0": 0 },
+    "b": {}
+  },
+  "/Users/felipe/Projetos/trakto/graphics-resources/src/models/icons/icon.service.ts": {
+    "path": "/Users/felipe/Projetos/trakto/graphics-resources/src/models/icons/icon.service.ts",
+    "statementMap": {
+      "0": {
+        "start": { "line": 1, "column": 0 },
+        "end": { "line": 1, "column": 42 }
+      },
+      "1": {
+        "start": { "line": 2, "column": 0 },
+        "end": { "line": 2, "column": 41 }
+      },
+      "2": {
+        "start": { "line": 3, "column": 0 },
+        "end": { "line": 3, "column": 56 }
+      },
+      "3": {
+        "start": { "line": 6, "column": 0 },
+        "end": { "line": 6, "column": null }
+      },
+      "4": {
+        "start": { "line": 6, "column": 26 },
+        "end": { "line": 6, "column": 35 }
+      },
+      "5": {
+        "start": { "line": 8, "column": 4 },
+        "end": { "line": 8, "column": null }
+      },
+      "6": {
+        "start": { "line": 22, "column": 15 },
+        "end": { "line": 35, "column": null }
+      },
+      "7": {
+        "start": { "line": 31, "column": 8 },
+        "end": { "line": 31, "column": 15 }
+      },
+      "8": {
+        "start": { "line": 32, "column": 13 },
+        "end": { "line": 32, "column": 49 }
+      },
+      "9": {
+        "start": { "line": 32, "column": 6 },
+        "end": { "line": 32, "column": 49 }
+      },
+      "10": {
+        "start": { "line": 34, "column": 11 },
+        "end": { "line": 34, "column": 47 }
+      },
+      "11": {
+        "start": { "line": 34, "column": 4 },
+        "end": { "line": 34, "column": 47 }
+      },
+      "12": {
+        "start": { "line": 36, "column": 0 },
+        "end": { "line": 36, "column": null }
+      },
+      "13": {
+        "start": { "line": 38, "column": 0 },
+        "end": { "line": 38, "column": 49 }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_19)",
+        "decl": {
+          "start": { "line": 6, "column": 0 },
+          "end": { "line": 6, "column": 26 }
+        },
+        "loc": {
+          "start": { "line": 6, "column": 0 },
+          "end": { "line": 36, "column": null }
+        }
+      },
+      "1": {
+        "name": "IconService",
+        "decl": {
+          "start": { "line": 7, "column": 2 },
+          "end": { "line": 7, "column": null }
+        },
+        "loc": {
+          "start": { "line": 7, "column": 2 },
+          "end": { "line": 9, "column": 3 }
+        }
+      },
+      "2": {
+        "name": "(anonymous_21)",
+        "decl": {
+          "start": { "line": 22, "column": 2 },
+          "end": { "line": 22, "column": 15 }
+        },
+        "loc": {
+          "start": { "line": 29, "column": 3 },
+          "end": { "line": 35, "column": null }
+        }
+      }
+    },
+    "branchMap": {
+      "0": {
+        "loc": {
+          "start": { "line": 8, "column": 4 },
+          "end": { "line": 8, "column": 11 }
+        },
+        "type": "binary-expr",
+        "locations": [
+          {
+            "start": { "line": 8, "column": 4 },
+            "end": { "line": 8, "column": 11 }
+          },
+          {
+            "start": { "line": 8, "column": 11 },
+            "end": { "line": 8, "column": null }
+          }
+        ]
+      },
+      "1": {
+        "loc": {
+          "start": { "line": 32, "column": 6 },
+          "end": { "line": 32, "column": 49 }
+        },
+        "type": "switch",
+        "locations": [
+          {
+            "start": { "line": 32, "column": 6 },
+            "end": { "line": 32, "column": 49 }
+          },
+          {
+            "start": { "line": 34, "column": 11 },
+            "end": { "line": 34, "column": 47 }
+          },
+          {
+            "start": { "line": 34, "column": 4 },
+            "end": { "line": 34, "column": 47 }
+          }
+        ]
+      },
+      "2": {
+        "loc": {
+          "start": { "line": 31, "column": 8 },
+          "end": { "line": 31, "column": 15 }
+        },
+        "type": "if",
+        "locations": [
+          {
+            "start": { "line": 31, "column": 8 },
+            "end": { "line": 31, "column": 15 }
+          },
+          {
+            "start": { "line": 31, "column": 8 },
+            "end": { "line": 31, "column": 15 }
+          }
+        ]
+      }
+    },
+    "s": {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0,
+      "10": 0,
+      "11": 0,
+      "12": 0,
+      "13": 0
+    },
+    "f": { "0": 0, "1": 0, "2": 0 },
+    "b": { "0": [0, 0], "1": [0, 0, 0], "2": [0, 0] }
+  },
+  "/Users/felipe/Projetos/trakto/graphics-resources/src/models/icons/index.ts": {
+    "path": "/Users/felipe/Projetos/trakto/graphics-resources/src/models/icons/index.ts",
+    "statementMap": {
+      "0": {
+        "start": { "line": 1, "column": 0 },
+        "end": { "line": 1, "column": 9 }
+      },
+      "1": {
+        "start": { "line": 1, "column": 9 },
+        "end": { "line": 1, "column": 31 }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_1)",
+        "decl": {
+          "start": { "line": 1, "column": 9 },
+          "end": { "line": 1, "column": 16 }
+        },
+        "loc": {
+          "start": { "line": 1, "column": 9 },
+          "end": { "line": 1, "column": 31 }
+        }
+      }
+    },
+    "branchMap": {},
+    "s": { "0": 0, "1": 0 },
+    "f": { "0": 0 },
+    "b": {}
+  },
+  "/Users/felipe/Projetos/trakto/graphics-resources/src/models/images/image.service.ts": {
+    "path": "/Users/felipe/Projetos/trakto/graphics-resources/src/models/images/image.service.ts",
+    "statementMap": {
+      "0": {
+        "start": { "line": 1, "column": 0 },
+        "end": { "line": 1, "column": 42 }
+      },
+      "1": {
+        "start": { "line": 3, "column": 0 },
+        "end": { "line": 3, "column": null }
+      },
+      "2": {
+        "start": { "line": 3, "column": 27 },
+        "end": { "line": 3, "column": 36 }
+      },
+      "3": {
+        "start": { "line": 5, "column": 4 },
+        "end": { "line": 5, "column": null }
+      },
+      "4": {
+        "start": { "line": 7, "column": 0 },
+        "end": { "line": 7, "column": null }
+      },
+      "5": {
+        "start": { "line": 9, "column": 0 },
+        "end": { "line": 9, "column": 51 }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_6)",
+        "decl": {
+          "start": { "line": 3, "column": 0 },
+          "end": { "line": 3, "column": 27 }
+        },
+        "loc": {
+          "start": { "line": 3, "column": 0 },
+          "end": { "line": 7, "column": null }
+        }
+      },
+      "1": {
+        "name": "ImageService",
+        "decl": {
+          "start": { "line": 4, "column": 2 },
+          "end": { "line": 4, "column": null }
+        },
+        "loc": {
+          "start": { "line": 4, "column": 2 },
+          "end": { "line": 6, "column": 3 }
+        }
+      }
+    },
+    "branchMap": {
+      "0": {
+        "loc": {
+          "start": { "line": 5, "column": 4 },
+          "end": { "line": 5, "column": 11 }
+        },
+        "type": "binary-expr",
+        "locations": [
+          {
+            "start": { "line": 5, "column": 4 },
+            "end": { "line": 5, "column": 11 }
+          },
+          {
+            "start": { "line": 5, "column": 11 },
+            "end": { "line": 5, "column": null }
+          }
+        ]
+      }
+    },
+    "s": { "0": 0, "1": 0, "2": 0, "3": 0, "4": 0, "5": 0 },
+    "f": { "0": 0, "1": 0 },
+    "b": { "0": [0, 0] }
+  },
+  "/Users/felipe/Projetos/trakto/graphics-resources/src/models/images/index.ts": {
+    "path": "/Users/felipe/Projetos/trakto/graphics-resources/src/models/images/index.ts",
+    "statementMap": {
+      "0": {
+        "start": { "line": 1, "column": 0 },
+        "end": { "line": 1, "column": 9 }
+      },
+      "1": {
+        "start": { "line": 1, "column": 9 },
+        "end": { "line": 1, "column": 32 }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_1)",
+        "decl": {
+          "start": { "line": 1, "column": 9 },
+          "end": { "line": 1, "column": 16 }
+        },
+        "loc": {
+          "start": { "line": 1, "column": 9 },
+          "end": { "line": 1, "column": 32 }
+        }
+      }
+    },
+    "branchMap": {},
+    "s": { "0": 0, "1": 0 },
+    "f": { "0": 0 },
+    "b": {}
+  }
+}
