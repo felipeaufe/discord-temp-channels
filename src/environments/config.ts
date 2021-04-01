@@ -1,4 +1,7 @@
-export const token = "ODIzMzI3MjU4OTA2NzIyMzA0.YFfNQw.dOuZZ2w4RX9GSHWrbdDJyCdKoJY";
+import * as dotenv from 'dotenv';
+dotenv.config();
+
+export const token = process.env.TOKEN;
 export const prefix = "tc!";
 
 

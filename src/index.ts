@@ -2,6 +2,8 @@ import Discord from "discord.js";
 import { token, prefix } from "./environments/config";
 import { getCommandList } from './utils/commands'
 
+console.log('Token: ', token);
+
 const client: any = new Discord.Client();
 client.commands = new Discord.Collection();
 
