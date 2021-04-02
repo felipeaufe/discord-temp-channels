@@ -1,6 +1,6 @@
 import Discord from 'discord.js';
 import { enumDiscordAPIError } from '../../enums/errors.enum';
-
+import { Info } from '../../utils/info.messages';
 interface ITempChannelList {
   channel: Discord.VoiceChannel;
   countName: number;
@@ -49,6 +49,10 @@ export default class Config {
   _client.on('voiceStateUpdate', (oldState: Discord.VoiceState, newState: any /*Discord.VoiceState*/) => {
     this._stateUpdate(newState);
   });
+
+  _client.on('channelDelete', channel => {
+    this._removeMainChannel(channel.id);
+  });
  };
 
  /**
@@ -58,7 +62,6 @@ export default class Config {
   * @param args Arguments
   */
  public execute (message: Discord.Message, args: Array<string>) {
-    console.log('Args: ', args);
     this._message = message;
 
     if(!args.length){
@@ -68,6 +71,7 @@ export default class Config {
     }
 
     this._newMainChannel(args);
+    message.delete();
  }
 
  /**
@@ -121,11 +125,13 @@ export default class Config {
     this._client.channels.fetch(args[0])
       .then((channel: Discord.Channel) => {
         if(channel.type !== "voice"){
-          return this._failure(`The id ${args[0]} is not a voice channel;`)
+          return Info.failure(this._message, `The id ${args[0]} is not a voice channel;`)
         }
         
         this._mainChannelsId.push(channel.id);
-        this._success();
+        this._setDefaultName(args);
+
+        Info.success(this._message);
       })
       .catch((error: any) => {
         let message: string | undefined;
@@ -134,7 +140,7 @@ export default class Config {
           message = `Channel not found with ID: \`${args[0]}\``;
         }
         
-        this._failure(message);
+        Info.failure(this._message, message);
         console.error("Error: ", error);
       })
   }
@@ -152,13 +158,13 @@ export default class Config {
       const channelName: IChannelName = this._channelName(newState);
       newState.guild.channels.create(channelName.name, {
         type: 'voice',
-        permissionOverwrites: [
-          {
-            id: newState.guild.roles.everyone,
-          }
-        ],
+        permissionOverwrites: [{ id: newState.guild.roles.everyone }],
       })
-      .then((channel: Discord.VoiceChannel) => {
+      .then(async (channel: Discord.VoiceChannel) => {
+        
+        const parent: Discord.VoiceChannel = await this._client.channels.fetch(newState.channelID) as Discord.VoiceChannel;
+        channel.setPosition(parent.rawPosition +1 )
+
         this._tempChannels.push({
           channel,
           countName: channelName.count
@@ -168,7 +174,7 @@ export default class Config {
       })
       .catch((error: any) => {
         console.error(error);
-        this._failure("An error occurred while trying to create a temporary channel.")
+        Info.failure(this._message, "An error occurred while trying to create a temporary channel.")
       });
     }
 
@@ -236,32 +242,26 @@ export default class Config {
   }
 
   /**
-   * Success message
+   * Set the new default temporary channel name;
+   * 
+   * @param args Params array
    */
-  private _success(): void{
-    this._message?.channel.send(new Discord.MessageEmbed()
-    
-      // Barr color
-      .setColor('#0099ff')
-      
-      // Message
-      .setDescription("**Finish!** Channel id: `12345`")
+  private _setDefaultName (args: Array<string>) {
+    const params = args;
+    params.splice(0,1);
 
-    ).then(sentMessage => sentMessage.delete({ timeout: this._timeout }));
+    this._defaultName = params.join(' ');
   }
 
   /**
-   * Error message
+   * Remove channel delete from mainChannel list
+   * @param channelId Channel Id
    */
-  private _failure(message?: string): void{
-    this._message?.channel.send(new Discord.MessageEmbed()
-    
-      // Barr color
-      .setColor('#cf0202')
-      
-      // Message
-      .setDescription(message || "**Error!** Something did not go as expected. :( ")
+  private _removeMainChannel(channelId: string): void {
+    const index = this._mainChannelsId.indexOf(channelId);
 
-    ).then(sentMessage => sentMessage.delete({ timeout: this._timeout }));
+    if(index > -1){
+      this._mainChannelsId.splice(index, 1);
+    }
   }
 }
