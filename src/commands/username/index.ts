@@ -9,7 +9,7 @@ export default class Username {
   /**
    * Command description
    */
-  public description = 'My Username';
+  public description = 'Username';
 
   /**
    * Main function to execute command;
