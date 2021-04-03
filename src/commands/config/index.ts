@@ -55,9 +55,9 @@ export default class Config {
     }
 
     this._newMainChannel(args);
-    // message.delete({
-    //   timeout: this._timeout
-    // });
+    message.delete({
+      timeout: this._timeout
+    });
  }
 
  /**
