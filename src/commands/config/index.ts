@@ -1,14 +1,13 @@
 import Discord from 'discord.js';
 import { enumDiscordAPIError } from '../../enums/errors.enum';
 import { Info } from '../../utils/info.messages';
-interface ITempChannelList {
-  channel: Discord.VoiceChannel;
-  countName: number;
-}
+import { db, IMainChannel, ITempChannel } from '../../models';
+
 interface IChannelName {
   name: string;
   count: number;
 }
+
 export default class Config {
   /**
    * Command trigger
@@ -21,24 +20,9 @@ export default class Config {
  public description = 'Config!';
 
  /**
-  * Default channel's name
-  */
- public _defaultName: string | undefined;
-
- /**
   * Globalizing Discord message function
   */
  private _message: Discord.Message | undefined;
-
- /**
-  * List of main channels id
-  */
- private _mainChannelsId: Array<string> = [];
-
- /**
-  * List of temporary channels
-  */
- private _tempChannels: Array<ITempChannelList> = [];
 
  /**
   * Message timeout to be excluded
@@ -71,7 +55,9 @@ export default class Config {
     }
 
     this._newMainChannel(args);
-    message.delete();
+    // message.delete({
+    //   timeout: this._timeout
+    // });
  }
 
  /**
@@ -127,9 +113,13 @@ export default class Config {
         if(channel.type !== "voice"){
           return Info.failure(this._message, `The id ${args[0]} is not a voice channel;`)
         }
-        
-        this._mainChannelsId.push(channel.id);
-        this._setDefaultName(args);
+
+        // Persist
+        db.mainChannel.updateOrAdd(channel.id, {
+          id: channel.id,
+          defaultName: this._setDefaultName(args),
+          serverId: this._message?.guild?.id || ''
+        });
 
         Info.success(this._message);
       })
@@ -146,6 +136,73 @@ export default class Config {
   }
 
   /**
+   * Create a new temporary channel
+   * 
+   * @param newState
+   */
+  private _newTempChannel(newState: any /*Discord.VoiceState*/): void {
+    // Check if channelID is a Main Channel
+    const mainChannel = db.mainChannel.findById(newState.channelID)
+    if(mainChannel) {
+      const channelName: IChannelName = this._channelName(mainChannel, newState);
+      newState.guild.channels.create(channelName.name, {
+        type: 'voice',
+        permissionOverwrites: [{ id: newState.guild.roles.everyone }],
+      })
+      .then(async (channel: Discord.VoiceChannel) => {
+        
+        // Move owner to your new channel
+        newState.member.voice.setChannel(channel);
+        
+        // Set new position to new temporary channel
+        const parent: Discord.VoiceChannel = await this._client.channels.fetch(newState.channelID) as Discord.VoiceChannel;
+        channel.setPosition(parent.rawPosition +1 )
+  
+        // Persist
+        db.tempChannel.add({
+          id: channel.id,
+          serverId: newState.guild.id,
+          mainId: newState.channelID,
+          number: channelName.count
+        })
+      })
+      .catch((error: any) => {
+        console.error(error);
+        Info.failure(this._message, "An error occurred while trying to create a temporary channel.")
+      });
+    }
+  }
+
+
+  /**
+   * Remove channel delete from mainChannel list
+   * @param channelId Channel Id
+   */
+   private _removeMainChannel(channelId: string): void {
+
+    if(db.mainChannel.findById(channelId)){
+      db.mainChannel.remove(channelId);
+    }
+  }
+
+  /**
+   * Remove temporary channel
+   */
+  private _removeTempChannel(): void{
+    // Check if exist any empty temporary channel
+    const tempChannels = db.tempChannel.list();
+    if(tempChannels.length >= 0) {
+      tempChannels.forEach( async (item: ITempChannel) => {
+        const channel: Discord.VoiceChannel = await this._client.channels.fetch(item.id) as Discord.VoiceChannel;
+        if(channel.members.size <= 0 ){
+          await channel.delete();
+          db.tempChannel.remove(item.id);
+        }
+      });
+    }
+  }
+
+  /**
    * Client event on state update
    * This event will create new temporary channel or delete empty one
    * 
@@ -154,39 +211,12 @@ export default class Config {
   private _stateUpdate (newState: any /*Discord.VoiceState*/): void {
   
     // Create new temporary channel
-    if(this._mainChannelsId.includes(newState.channelID)) {
-      const channelName: IChannelName = this._channelName(newState);
-      newState.guild.channels.create(channelName.name, {
-        type: 'voice',
-        permissionOverwrites: [{ id: newState.guild.roles.everyone }],
-      })
-      .then(async (channel: Discord.VoiceChannel) => {
-        
-        const parent: Discord.VoiceChannel = await this._client.channels.fetch(newState.channelID) as Discord.VoiceChannel;
-        channel.setPosition(parent.rawPosition +1 )
+    this._newTempChannel(newState);
 
-        this._tempChannels.push({
-          channel,
-          countName: channelName.count
-        })
-
-        newState.member.voice.setChannel(channel);
-      })
-      .catch((error: any) => {
-        console.error(error);
-        Info.failure(this._message, "An error occurred while trying to create a temporary channel.")
-      });
-    }
+    // Or | And
 
     // Delete empty temporary channel
-    if(this._tempChannels.length >= 0) {
-      this._tempChannels.forEach( async (item: ITempChannelList, index: number) => {
-        if(item.channel.members.size <= 0 ){
-          await item.channel.delete();
-          this._tempChannels.splice(index, 1)
-        }
-      });
-    }
+    this._removeTempChannel();
   } 
 
   /**
@@ -195,12 +225,13 @@ export default class Config {
    * @returns Channel count name
    */
   private _newChannelCount (): number {
-    const existents: Array<number> = this._tempChannels.map((item: ITempChannelList) => {
-      return item.countName;
-    });
+    const numbers: Array<number> = (db.tempChannel.list() || [])
+      .map((item: ITempChannel) => {
+        return item.number
+      });
 
     for (let count = 1; count <= 999; count++) {
-      if(!existents.includes(count)) {
+      if(!numbers.includes(count)) {
         return count;
       }
     }
@@ -214,12 +245,12 @@ export default class Config {
    * @param newState New state
    * @returns channel name with IChanelName interface
    */
-  private _channelName(newState: any /*Discord.VoiceState*/): IChannelName {
+  private _channelName(mainChannel: IMainChannel, newState: any /*Discord.VoiceState*/): IChannelName {
     const nameCount = this._newChannelCount();
-    const name = this._defaultName || newState.member.user.username;
+    const name = mainChannel.defaultName || newState.member.user.username;
     
     // Return default name
-    if(!this._defaultName){
+    if(!mainChannel.defaultName){
       return {
         name: ` #${nameCount} | ${name}'s channel`,
         count: nameCount
@@ -247,21 +278,13 @@ export default class Config {
    * @param args Params array
    */
   private _setDefaultName (args: Array<string>) {
-    const params = args;
-    params.splice(0,1);
-
-    this._defaultName = params.join(' ');
-  }
-
-  /**
-   * Remove channel delete from mainChannel list
-   * @param channelId Channel Id
-   */
-  private _removeMainChannel(channelId: string): void {
-    const index = this._mainChannelsId.indexOf(channelId);
-
-    if(index > -1){
-      this._mainChannelsId.splice(index, 1);
+    if(args[1]){
+      const params = args;
+      params.splice(0,1);
+  
+      return params.join(' ');
     }
+
+    return '';
   }
 }

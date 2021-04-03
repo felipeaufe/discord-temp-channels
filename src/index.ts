@@ -2,6 +2,8 @@ import Discord from "discord.js";
 import { token, prefix } from "./environments/config";
 import { getCommandList } from './utils/commands'
 import { IClient } from './interfaces/client.interface'
+import { MainChannelModel } from './models/mainChannel.model';
+import { TempChannelModel } from './models/tempChannel.model';
 
 const client: IClient = new Discord.Client();
 client.commands = new Discord.Collection();
@@ -20,7 +22,7 @@ client.once('ready', () => {
 	console.log('======================\n');
 });
 
-// Client command watcher
+
 client.on('message', (message: Discord.Message) =>{
 
   // Scape if not found the prefix in message
