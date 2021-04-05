@@ -1,12 +1,3 @@
-## Teste unitários
+## Teste de aceitação
 
-Testa a menor unidade de funcionalidade, geralmente um método / função (por exemplo, dada uma classe com um estado específico, chamar x método na classe deve fazer com que y aconteça). Os testes de unidade devem ser focados em um recurso específico (por exemplo, chamar o método pop quando a pilha está vazia deve gerar um InvalidOperationException). Tudo o que toca deve ser feito na memória; isso significa que o código de teste e o código em teste não devem:
-
-- Convide colaboradores (não triviais)
-- Acesse a rede
-- Atingir um banco de dados
-- Use o sistema de arquivos
-- Girar um fio
-- etc.
-
-Qualquer tipo de dependência lenta / difícil de entender / inicializar / manipular deve ser stubbed / mocked / seja o que for, usando as técnicas apropriadas para que você possa se concentrar no que a unidade de código está fazendo, e não nas suas dependências.
+Teste de aceitação é uma fase do processo de teste em que um teste de caixa-preta é realizado num sistema antes de sua disponibilização. Tem por função verificar o sistema em relação aos seus requisitos originais, e às necessidades atuais do usuário. É geralmente realizado por um grupo restrito de usuários finais, num ambiente parecido com o deles. Há três estratégias de implementação de testes de aceitação: a aceitação formal, a aceitação informal (ou teste alfa) e o teste beta.

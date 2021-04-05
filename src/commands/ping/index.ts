@@ -1,6 +1,6 @@
 import Discord from 'discord.js';
 
-export default class Ping {
+export class Ping {
   /**
    * Command trigger
    */
@@ -18,7 +18,6 @@ export default class Ping {
    * @param args Arguments
    */
   public execute (message: Discord.Message, args: Array<string>) {
-    console.log('args: ', args);
-    message.channel.send('Pong.');
+    message.channel.send('Pong!');
   }
 }

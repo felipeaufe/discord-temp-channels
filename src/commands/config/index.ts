@@ -8,7 +8,7 @@ interface IChannelName {
   count: number;
 }
 
-export default class Config {
+export class Config {
   /**
    * Command trigger
    */

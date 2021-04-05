@@ -1,6 +1,6 @@
 import Discord from 'discord.js';
 
-export default class Username {
+export class Username {
   /**
    * Command trigger
    */

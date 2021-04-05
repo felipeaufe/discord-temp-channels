@@ -17,7 +17,7 @@ export default {
   clearMocks: true,
 
   // Indicates whether the coverage information should be collected while executing the test
-  collectCoverage: false,
+  collectCoverage: true,
 
   // An array of glob patterns indicating a set of files for which coverage information should be collected
   collectCoverageFrom: ['src/**'],
@@ -26,9 +26,12 @@ export default {
   coverageDirectory: '__tests__/coverage',
 
   // An array of regexp pattern strings used to skip coverage collection
-  // coveragePathIgnorePatterns: [
-  //   "/node_modules/",
-  // ],
+  coveragePathIgnorePatterns: [
+    "/node_modules/",
+    "/__tests__",
+    ".json",
+    "/dist"
+  ],
 
   // Indicates which provider should be used to instrument code for coverage
   // coverageProvider: "babel",
@@ -138,7 +141,8 @@ export default {
 
   // The test environment that will be used for testing
   // testEnvironment: "jest-environment-jsdom",
-  testEnvironment: 'jest-environment-jsdom-fifteen',
+  testEnvironment: 'node',
+  // testEnvironment: 'jest-environment-jsdom-fifteen',
 
   // Options that will be passed to the testEnvironment
   // testEnvironmentOptions: {},
