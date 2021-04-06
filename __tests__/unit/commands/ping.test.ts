@@ -1,15 +1,16 @@
-import { Ping } from '../../src/commands/ping';
+import { Ping } from '../../../src/commands/ping';
+import { enumCommands } from '../../../src/enums/commands.enum';
 import Discord from 'discord.js';
 
-describe('Command Ping', () => {
-  
+describe(`Command ${enumCommands.ping}`, () => {
+
   // Global config
   const command = new Ping();
 
-  it('Should have command named "ping".', () => {
+  it(`should have command named "${enumCommands.ping}".`, () => {
     // Expect
     expect(typeof command.name).toEqual('string');
-    expect(command.name).toEqual('ping');
+    expect(command.name).toEqual(enumCommands.ping);
   });
 
   it('Should be send "Pong!" to text channel.', () => {
@@ -23,7 +24,7 @@ describe('Command Ping', () => {
     const sendSpy = jest.spyOn(channel, 'send');
     
     // execute
-    command.execute(message, ['ping'])
+    command.execute(message, [enumCommands.ping])
   
     // expect
     expect(sendSpy).toHaveBeenCalled();

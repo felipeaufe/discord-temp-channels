@@ -1,10 +1,11 @@
 import Discord from 'discord.js';
+import { enumCommands } from '../../enums/commands.enum';
 
 export class Ping {
   /**
    * Command trigger
    */
-  public name = 'ping';
+  public name = enumCommands.ping;
 
   /**
    * Command description

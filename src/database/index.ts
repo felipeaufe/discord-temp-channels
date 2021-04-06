@@ -6,5 +6,6 @@ export const db = lowDB(adapter);
 
 db.defaults({
   mainChannel: [],
-  tempChannel: []
+  tempChannel: [],
+  cleanChannel: []
 }).write();

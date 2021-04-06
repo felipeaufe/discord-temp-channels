@@ -1,15 +1,16 @@
 import Discord from 'discord.js';
-import { Username } from '../../src/commands/username';
+import { enumCommands } from '../../../src/enums/commands.enum';
+import { Username } from '../../../src/commands/username';
 
-describe('Command username', () => {
+describe(`Command ${enumCommands.username}`, () => {
   
   // Global config
   const command = new Username();
 
-  it('Should have command named "username".', () => {
+  it(`should have command named "${enumCommands.username}".`, () => {
     // Expect
     expect(typeof command.name).toEqual('string');
-    expect(command.name).toEqual('username');
+    expect(command.name).toEqual(enumCommands.username);
   });
 
   it('Should be send username to text channel.', () => {

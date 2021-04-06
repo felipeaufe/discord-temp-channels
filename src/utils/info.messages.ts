@@ -1,11 +1,7 @@
 import Discord from 'discord.js';
+import { color, timeout } from '../environments/config';
 
 export class Info {
-
-  /**
-   * Timeout message
-   */
-  private static _timeout = 10000;
 
   constructor () {}
   
@@ -16,12 +12,12 @@ export class Info {
     message?.channel.send(new Discord.MessageEmbed()
     
       // Barr color
-      .setColor('#0099ff')
+      .setColor(color.brand)
       
       // Message
       .setDescription("**Finish!** Channel id: `12345`")
 
-    ).then(sentMessage => sentMessage.delete({ timeout: this._timeout }));
+    ).then(sentMessage => sentMessage.delete({ timeout }));
   }
 
   /**
@@ -31,12 +27,12 @@ export class Info {
     message?.channel.send(new Discord.MessageEmbed()
     
       // Barr color
-      .setColor('#e7c000')
+      .setColor(color.warning)
       
       // Message
       .setDescription("**Finish!** Channel id: `12345`")
 
-    ).then(sentMessage => sentMessage.delete({ timeout: this._timeout }));
+    ).then(sentMessage => sentMessage.delete({ timeout }));
   }
 
   /**
@@ -46,11 +42,11 @@ export class Info {
     message?.channel.send(new Discord.MessageEmbed()
     
       // Barr color
-      .setColor('#cf0202')
+      .setColor(color.error)
       
       // Message
       .setDescription(text || "**Error!** Something did not go as expected. :( ")
 
-    ).then(sentMessage => sentMessage.delete({ timeout: this._timeout }));
+    ).then(sentMessage => sentMessage.delete({ timeout }));
   }
 }

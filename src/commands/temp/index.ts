@@ -1,4 +1,6 @@
 import Discord from 'discord.js';
+import { prefix, color, timeout } from '../../environments/config';
+import { enumCommands } from '../../enums/commands.enum';
 import { enumDiscordAPIError } from '../../enums/errors.enum';
 import { Info } from '../../utils/info.messages';
 import { db, IMainChannel, ITempChannel } from '../../models';
@@ -8,35 +10,30 @@ interface IChannelName {
   count: number;
 }
 
-export class Config {
+export class Temp {
   /**
    * Command trigger
    */
- public name = 'config';
+ public name = enumCommands.temp;
 
  /**
   * Command description
   */
- public description = 'Config!';
+ public description = 'Temporary channel!';
 
  /**
   * Globalizing Discord message function
   */
  private _message: Discord.Message | undefined;
 
- /**
-  * Message timeout to be excluded
-  */
- private _timeout = 10000;
-
  constructor(private _client: Discord.Client){
-  _client.on('voiceStateUpdate', (oldState: Discord.VoiceState, newState: any /*Discord.VoiceState*/) => {
-    this._stateUpdate(newState);
-  });
-
-  _client.on('channelDelete', channel => {
-    this._removeMainChannel(channel.id);
-  });
+    _client.on('voiceStateUpdate', (oldState: Discord.VoiceState, newState: any /*Discord.VoiceState*/) => {
+      this._stateUpdate(newState);
+    });
+  
+    _client.on('channelDelete', channel => {
+      this._removeMainChannel(channel.id);
+    });
  };
 
  /**
@@ -52,12 +49,11 @@ export class Config {
       message.channel.send(
         this._instructions(message.author)
       );
+    } else {
+      this._newMainChannel(args);
     }
 
-    this._newMainChannel(args);
-    message.delete({
-      timeout: this._timeout
-    });
+    message.delete({ timeout });
  }
 
  /**
@@ -66,34 +62,29 @@ export class Config {
   * @returns Discord MessageEmbed with instructions
   */
   private _instructions(author: Discord.User): Discord.MessageEmbed {
-      return new Discord.MessageEmbed()
+    return new Discord.MessageEmbed()
 
     // Barr color
-    .setColor('#0099ff')
+    .setColor(color.brand)
     
     // Attach image
-    .attachFiles(['./src/assets/img/tc-logo.png'])
+    .attachFiles(['./src/assets/img/cattea-logo.jpeg'])
     
     // Author name and link
-    .setAuthor('Temp Channels', 'attachment://tc-logo.png', 'https://discord.js.org')
-    .setDescription(`Welcome to Temp Channels bot.\n`)
-
-    // Body
-    .addField(
-      '> Start configuration:',
-      `
-        > 
-        > 1. Creating new channel:
-        > \`tc!config [channelId]\`
-        > 
-        > 2. Change default name:
-        > \`tc!config [channelId] '[ChannelName]' \`
-
-        > By default, the channel number will be at the end of the name, but you can change it by including the ## prefix in the channel name, for example:
-        > \`tc!config 1234 Temporary room n.## \`
-
-      `,
-    )
+    .setAuthor('Creating a temporary channel', 'attachment://cattea-logo.jpeg', 'https://discord.js.org')
+    .setDescription(`
+      > - Configuring the channel builder:
+      > \`${prefix}${enumCommands.temp} [channelId]\`
+      > 
+      > - Change temporary default name:
+      > \`${prefix}${enumCommands.temp} [channelId] [ChannelName] \`
+      > 
+      > By default, the channel number will be at the end of the name, but you can change it by including the ## prefix in the channel name, for example:
+      > 
+      > \`${prefix}${enumCommands.temp} 1234 Temporary room n.## \`
+      > 
+      > Desc: This command will create a Main Temporary channel creator, named 'Temporary room n.x'.
+    `)
 
     // Footer
     .setTimestamp()

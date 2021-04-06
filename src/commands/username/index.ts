@@ -1,10 +1,11 @@
 import Discord from 'discord.js';
+import { enumCommands } from '../../enums/commands.enum';
 
 export class Username {
   /**
    * Command trigger
    */
-  public name = 'username';
+  public name = enumCommands.username;
 
   /**
    * Command description

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1617625453546" clover="3.2.0">
-  <project timestamp="1617625453546" name="All files">
-    <metrics statements="149" coveredstatements="54" conditionals="68" coveredconditionals="9" methods="45" coveredmethods="14" elements="262" coveredelements="77" complexity="0" loc="149" ncloc="149" packages="10" files="14" classes="14"/>
+<coverage generated="1617671489422" clover="3.2.0">
+  <project timestamp="1617671489422" name="All files">
+    <metrics statements="205" coveredstatements="105" conditionals="102" coveredconditionals="15" methods="56" coveredmethods="25" elements="363" coveredelements="145" complexity="0" loc="205" ncloc="205" packages="12" files="18" classes="18"/>
     <package name="src">
       <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="index.ts" path="/Users/felipe/Projetos/felipe/discord-temp-channels/src/index.ts">
@@ -11,165 +11,230 @@
         <line num="4" count="0" type="stmt"/>
       </file>
     </package>
-    <package name="src.commands.config">
-      <metrics statements="68" coveredstatements="21" conditionals="36" coveredconditionals="2" methods="21" coveredmethods="6"/>
-      <file name="index.ts" path="/Users/felipe/Projetos/felipe/discord-temp-channels/src/commands/config/index.ts">
-        <metrics statements="68" coveredstatements="21" conditionals="36" coveredconditionals="2" methods="21" coveredmethods="6"/>
+    <package name="src.commands.cattea">
+      <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+      <file name="index.ts" path="/Users/felipe/Projetos/felipe/discord-temp-channels/src/commands/cattea/index.ts">
+        <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="59" count="1" type="stmt"/>
+        <line num="65" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.commands.clean">
+      <metrics statements="27" coveredstatements="21" conditionals="18" coveredconditionals="3" methods="6" coveredmethods="6"/>
+      <file name="index.ts" path="/Users/felipe/Projetos/felipe/discord-temp-channels/src/commands/clean/index.ts">
+        <metrics statements="27" coveredstatements="21" conditionals="18" coveredconditionals="3" methods="6" coveredmethods="6"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
-        <line num="11" count="1" type="stmt"/>
-        <line num="15" count="4" type="stmt"/>
-        <line num="20" count="4" type="stmt"/>
-        <line num="30" count="4" type="stmt"/>
-        <line num="32" count="4" type="stmt"/>
-        <line num="33" count="4" type="stmt"/>
-        <line num="34" count="0" type="stmt"/>
-        <line num="37" count="4" type="stmt"/>
-        <line num="38" count="0" type="stmt"/>
-        <line num="49" count="1" type="stmt"/>
-        <line num="51" count="1" type="cond" truecount="1" falsecount="1"/>
-        <line num="52" count="1" type="stmt"/>
-        <line num="57" count="1" type="stmt"/>
-        <line num="58" count="1" type="stmt"/>
-        <line num="69" count="1" type="stmt"/>
-        <line num="111" count="1" type="stmt"/>
-        <line num="113" count="1" type="cond" truecount="0" falsecount="2"/>
-        <line num="114" count="0" type="stmt"/>
-        <line num="118" count="0" type="stmt"/>
-        <line num="124" count="0" type="stmt"/>
-        <line num="129" count="1" type="cond" truecount="1" falsecount="1"/>
-        <line num="130" count="0" type="stmt"/>
-        <line num="133" count="1" type="stmt"/>
-        <line num="134" count="0" type="stmt"/>
-        <line num="145" count="0" type="stmt"/>
-        <line num="146" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="147" count="0" type="stmt"/>
-        <line num="148" count="0" type="stmt"/>
-        <line num="152" count="0" type="stmt"/>
-        <line num="155" count="0" type="stmt"/>
-        <line num="158" count="0" type="stmt"/>
-        <line num="159" count="0" type="stmt"/>
-        <line num="162" count="0" type="stmt"/>
-        <line num="170" count="0" type="stmt"/>
-        <line num="171" count="0" type="stmt"/>
-        <line num="183" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="184" count="0" type="stmt"/>
-        <line num="193" count="0" type="stmt"/>
-        <line num="194" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="195" count="0" type="stmt"/>
-        <line num="196" count="0" type="stmt"/>
-        <line num="197" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="198" count="0" type="stmt"/>
-        <line num="199" count="0" type="stmt"/>
-        <line num="214" count="0" type="stmt"/>
-        <line num="219" count="0" type="stmt"/>
-        <line num="228" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="230" count="0" type="stmt"/>
-        <line num="233" count="0" type="stmt"/>
-        <line num="234" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="235" count="0" type="stmt"/>
-        <line num="239" count="0" type="stmt"/>
-        <line num="249" count="0" type="stmt"/>
-        <line num="250" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="253" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="254" count="0" type="stmt"/>
-        <line num="261" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="262" count="0" type="stmt"/>
-        <line num="269" count="0" type="stmt"/>
-        <line num="281" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="282" count="0" type="stmt"/>
-        <line num="283" count="0" type="stmt"/>
-        <line num="285" count="0" type="stmt"/>
-        <line num="288" count="0" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="39" count="2" type="stmt"/>
+        <line num="41" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="42" count="1" type="stmt"/>
+        <line num="46" count="1" type="stmt"/>
+        <line num="49" count="2" type="stmt"/>
+        <line num="59" count="1" type="stmt"/>
+        <line num="97" count="1" type="stmt"/>
+        <line num="99" count="1" type="cond" truecount="0" falsecount="2"/>
+        <line num="100" count="0" type="stmt"/>
+        <line num="103" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="106" count="0" type="stmt"/>
+        <line num="113" count="0" type="stmt"/>
+        <line num="118" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="119" count="0" type="stmt"/>
+        <line num="122" count="1" type="stmt"/>
+        <line num="123" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.commands.ping">
-      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
       <file name="index.ts" path="/Users/felipe/Projetos/felipe/discord-temp-channels/src/commands/ping/index.ts">
-        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.commands.temp">
+      <metrics statements="69" coveredstatements="22" conditionals="36" coveredconditionals="3" methods="21" coveredmethods="6"/>
+      <file name="index.ts" path="/Users/felipe/Projetos/felipe/discord-temp-channels/src/commands/temp/index.ts">
+        <metrics statements="69" coveredstatements="22" conditionals="36" coveredconditionals="3" methods="21" coveredmethods="6"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
-        <line num="7" count="1" type="stmt"/>
-        <line num="12" count="1" type="stmt"/>
-        <line num="21" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="17" count="3" type="stmt"/>
+        <line num="22" count="3" type="stmt"/>
+        <line num="29" count="3" type="stmt"/>
+        <line num="30" count="3" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="34" count="3" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="46" count="2" type="stmt"/>
+        <line num="48" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="49" count="1" type="stmt"/>
+        <line num="53" count="1" type="stmt"/>
+        <line num="56" count="2" type="stmt"/>
+        <line num="65" count="1" type="stmt"/>
+        <line num="102" count="1" type="stmt"/>
+        <line num="104" count="1" type="cond" truecount="0" falsecount="2"/>
+        <line num="105" count="0" type="stmt"/>
+        <line num="109" count="0" type="stmt"/>
+        <line num="115" count="0" type="stmt"/>
+        <line num="120" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="121" count="0" type="stmt"/>
+        <line num="124" count="1" type="stmt"/>
+        <line num="125" count="0" type="stmt"/>
+        <line num="136" count="0" type="stmt"/>
+        <line num="137" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="138" count="0" type="stmt"/>
+        <line num="139" count="0" type="stmt"/>
+        <line num="143" count="0" type="stmt"/>
+        <line num="146" count="0" type="stmt"/>
+        <line num="149" count="0" type="stmt"/>
+        <line num="150" count="0" type="stmt"/>
+        <line num="153" count="0" type="stmt"/>
+        <line num="161" count="0" type="stmt"/>
+        <line num="162" count="0" type="stmt"/>
+        <line num="174" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="175" count="0" type="stmt"/>
+        <line num="184" count="0" type="stmt"/>
+        <line num="185" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="186" count="0" type="stmt"/>
+        <line num="187" count="0" type="stmt"/>
+        <line num="188" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="189" count="0" type="stmt"/>
+        <line num="190" count="0" type="stmt"/>
+        <line num="205" count="0" type="stmt"/>
+        <line num="210" count="0" type="stmt"/>
+        <line num="219" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="221" count="0" type="stmt"/>
+        <line num="224" count="0" type="stmt"/>
+        <line num="225" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="226" count="0" type="stmt"/>
+        <line num="230" count="0" type="stmt"/>
+        <line num="240" count="0" type="stmt"/>
+        <line num="241" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="244" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="245" count="0" type="stmt"/>
+        <line num="252" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="253" count="0" type="stmt"/>
+        <line num="260" count="0" type="stmt"/>
+        <line num="272" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="273" count="0" type="stmt"/>
+        <line num="274" count="0" type="stmt"/>
+        <line num="276" count="0" type="stmt"/>
+        <line num="279" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.commands.username">
-      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
       <file name="index.ts" path="/Users/felipe/Projetos/felipe/discord-temp-channels/src/commands/username/index.ts">
-        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="7" count="1" type="stmt"/>
-        <line num="12" count="1" type="stmt"/>
-        <line num="21" count="1" type="stmt"/>
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.config">
-      <metrics statements="25" coveredstatements="0" conditionals="14" coveredconditionals="0" methods="2" coveredmethods="0"/>
-      <file name="DiscordClient.ts" path="/Users/felipe/Projetos/felipe/discord-temp-channels/src/config/DiscordClient.ts">
-        <metrics statements="25" coveredstatements="0" conditionals="14" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <metrics statements="28" coveredstatements="0" conditionals="28" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <file name="client.ts" path="/Users/felipe/Projetos/felipe/discord-temp-channels/src/config/client.ts">
+        <metrics statements="28" coveredstatements="0" conditionals="28" coveredconditionals="0" methods="2" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
-        <line num="6" count="0" type="stmt"/>
-        <line num="7" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
-        <line num="12" count="0" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
         <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
         <line num="18" count="0" type="stmt"/>
-        <line num="19" count="0" type="stmt"/>
-        <line num="20" count="0" type="stmt"/>
-        <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
         <line num="25" count="0" type="stmt"/>
-        <line num="27" count="0" type="stmt"/>
-        <line num="30" count="0" type="cond" truecount="0" falsecount="4"/>
-        <line num="33" count="0" type="stmt"/>
-        <line num="34" count="0" type="stmt"/>
-        <line num="37" count="0" type="cond" truecount="0" falsecount="6"/>
-        <line num="39" count="0" type="stmt"/>
+        <line num="26" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="35" count="0" type="cond" truecount="0" falsecount="6"/>
+        <line num="36" count="0" type="cond" truecount="0" falsecount="4"/>
         <line num="40" count="0" type="cond" truecount="0" falsecount="4"/>
-        <line num="42" count="0" type="stmt"/>
         <line num="43" count="0" type="stmt"/>
-        <line num="47" count="0" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="47" count="0" type="cond" truecount="0" falsecount="6"/>
+        <line num="49" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="52" count="0" type="stmt"/>
+        <line num="53" count="0" type="stmt"/>
+        <line num="57" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.database">
       <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="index.ts" path="/Users/felipe/Projetos/felipe/discord-temp-channels/src/database/index.ts">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="7" count="1" type="stmt"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
       </file>
     </package>
     <package name="src.enums">
-      <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <metrics statements="8" coveredstatements="8" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
+      <file name="commands.enum.ts" path="/Users/felipe/Projetos/felipe/discord-temp-channels/src/enums/commands.enum.ts">
+        <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="1" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="6" count="5" type="stmt"/>
+      </file>
       <file name="errors.enum.ts" path="/Users/felipe/Projetos/felipe/discord-temp-channels/src/enums/errors.enum.ts">
         <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-        <line num="1" count="1" type="cond" truecount="2" falsecount="0"/>
-        <line num="2" count="1" type="stmt"/>
+        <line num="1" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="2" count="2" type="stmt"/>
       </file>
     </package>
     <package name="src.environments">
-      <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="config.ts" path="/Users/felipe/Projetos/felipe/discord-temp-channels/src/environments/config.ts">
-        <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="0" type="stmt"/>
-        <line num="2" count="0" type="stmt"/>
-        <line num="4" count="0" type="stmt"/>
-        <line num="5" count="0" type="stmt"/>
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
       </file>
     </package>
     <package name="src.models">
-      <metrics statements="22" coveredstatements="14" conditionals="2" coveredconditionals="0" methods="8" coveredmethods="2"/>
+      <metrics statements="28" coveredstatements="20" conditionals="2" coveredconditionals="0" methods="9" coveredmethods="3"/>
       <file name="base.model.ts" path="/Users/felipe/Projetos/felipe/discord-temp-channels/src/models/base.model.ts">
         <metrics statements="9" coveredstatements="1" conditionals="2" coveredconditionals="0" methods="6" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
+        <line num="1" count="2" type="stmt"/>
         <line num="14" count="0" type="stmt"/>
         <line num="25" count="0" type="stmt"/>
         <line num="37" count="0" type="stmt"/>
@@ -179,27 +244,36 @@
         <line num="63" count="0" type="stmt"/>
         <line num="72" count="0" type="stmt"/>
       </file>
+      <file name="cleanChannel.model.ts" path="/Users/felipe/Projetos/felipe/discord-temp-channels/src/models/cleanChannel.model.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="18" count="2" type="stmt"/>
+      </file>
       <file name="index.ts" path="/Users/felipe/Projetos/felipe/discord-temp-channels/src/models/index.ts">
-        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="15" count="1" type="stmt"/>
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
       </file>
       <file name="mainChannel.model.ts" path="/Users/felipe/Projetos/felipe/discord-temp-channels/src/models/mainChannel.model.ts">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="11" count="1" type="stmt"/>
-        <line num="14" count="1" type="stmt"/>
-        <line num="17" count="1" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
       </file>
       <file name="tempChannel.model.ts" path="/Users/felipe/Projetos/felipe/discord-temp-channels/src/models/tempChannel.model.ts">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="12" count="1" type="stmt"/>
-        <line num="15" count="1" type="stmt"/>
-        <line num="18" count="1" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="18" count="2" type="stmt"/>
       </file>
     </package>
     <package name="src.utils">
@@ -212,15 +286,15 @@
       </file>
       <file name="info.messages.ts" path="/Users/felipe/Projetos/felipe/discord-temp-channels/src/utils/info.messages.ts">
         <metrics statements="9" coveredstatements="4" conditionals="14" coveredconditionals="5" methods="7" coveredmethods="1"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
-        <line num="16" count="0" type="cond" truecount="0" falsecount="4"/>
-        <line num="24" count="0" type="stmt"/>
-        <line num="31" count="0" type="cond" truecount="0" falsecount="4"/>
-        <line num="39" count="0" type="stmt"/>
-        <line num="46" count="1" type="cond" truecount="3" falsecount="1"/>
-        <line num="54" count="0" type="stmt"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="12" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="27" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="42" count="2" type="cond" truecount="3" falsecount="1"/>
+        <line num="50" count="0" type="stmt"/>
       </file>
     </package>
   </project>
