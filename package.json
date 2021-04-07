@@ -10,7 +10,8 @@
     "start": "tsc-watch --onSuccess 'ts-node -r tsconfig-paths/register ./src/index.ts'",
     "build": "tsc",
     "prebuild": "rm -rf dist/*",
-    "test": "jest"
+    "test": "jest",
+    "commit": "cz"
   },
   "dependencies": {
     "discord.js": "~12.5.2",
@@ -19,6 +20,7 @@
   },
   "devDependencies": {
     "@types/jest": "~26.0.22",
+    "cz-conventional-changelog": "3.3.0",
     "jest": "~26.6.3",
     "jest-environment-jsdom-fifteen": "~1.0.2",
     "ts-jest": "~26.5.4",
