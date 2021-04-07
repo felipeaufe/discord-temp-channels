@@ -2,6 +2,7 @@ import Discord from 'discord.js';
 import { Clean } from '../../../src/commands/clean';
 import { timeout } from '../../../src/environments/config';
 import { enumCommands } from '../../../src/enums/commands.enum';
+import { db, ICleanChannel }  from '../../../src/models';
 
 // Global config
 const channels = { fetch: jest.fn().mockImplementation(() => Promise.resolve()) };
@@ -64,7 +65,52 @@ describe(`Command ${enumCommands.clean}`, () => {
 });
 
 describe(`Cleaning text channels`, () => {
-  it('should be call _schedule methods', () => {});
+
+
+  it('should be call setInterval every one minute', () => {
+
+    // set
+    jest.useFakeTimers();
+    const oneMinute = 1 * 60000;
+
+    // execute;
+    Clean.schedule(client);
+
+    // expect
+    expect(setInterval).toBeCalledTimes(1);
+    expect(setInterval).toHaveBeenLastCalledWith(expect.any(Function), oneMinute);
+  });
+
+  it('should be call db object', () => {
+
+    // set
+    const dbItemMok: Array<ICleanChannel> = [{
+      "id": "111111111111111111111",
+      "serverId": "222222222222222222222",
+      "interval": 1,
+      "updated_at": 1617759638454
+    }];
+    const channels = { fetch: jest.fn().mockImplementation(() => Promise.resolve( {} )) };
+    const client: Discord.Client = ({
+    channels
+    } as unknown) as Discord.Client;
+    db.cleanChannel.list = jest.fn().mockImplementation(() => dbItemMok);
+    
+    // execute;
+    Clean.schedule(client);
+
+    // Expect
+    jest.useFakeTimers();
+    expect(db.cleanChannel.list).toHaveBeenCalledTimes(0);
+    expect(Clean.channels).toHaveLength(0);
+    
+    jest.runOnlyPendingTimers();
+    expect(db.cleanChannel.list).toHaveBeenCalledTimes(1);
+
+    expect(Clean.channels).toHaveLength(1);
+
+  });
+
   it('should be call _clearChannel methods', () => {});
   it('should be call _updateScheduleChannels methods', () => {});
 });

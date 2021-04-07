@@ -27,7 +27,7 @@ export class Clean {
   /**
    * Loaded text channels
    */
-  private static _channels: Array<ICleanTextChannel> = [];
+  public static channels: Array<ICleanTextChannel> = [];
 
   /**
    * default Interval in minutes
@@ -72,7 +72,7 @@ export class Clean {
       try {
         this._updateScheduleChannels(client);
 
-        this._channels = this._channels.map((item: ICleanTextChannel) => {
+        this.channels = this.channels.map((item: ICleanTextChannel) => {
       
           // Update next data;
           if(item.updated_at < new Date().getTime()) {
@@ -118,14 +118,16 @@ export class Clean {
   private static _updateScheduleChannels(client: Discord.Client){
     
     const channels: Array<ICleanChannel> = (db.cleanChannel.list() || []) as Array<ICleanChannel>;
-    const channelsId: Array<string> = this._channels.map((item: ICleanTextChannel) => item.id);
+    const channelsId: Array<string> = this.channels.map((item: ICleanTextChannel) => item.id);
 
     channels.forEach( async (item: ICleanChannel) => {
       if(!channelsId.includes(item.id)){
-
+            
         const channel: Discord.TextChannel = await client.channels.fetch(item.id) as Discord.TextChannel
+
         if(channel) {
-          this._channels.push({ ...item, channel });
+          this.channels.push({ ...item, channel });
+          console.log("this.channels", this.channels)
         }
       }
     });
@@ -203,5 +205,4 @@ export class Clean {
         console.error("Error: ", error);
       })
   }
-
 }
