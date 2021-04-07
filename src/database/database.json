@@ -7,5 +7,18 @@
     }
   ],
   "tempChannel": [],
-  "cleanChannel": []
+  "cleanChannel": [
+    {
+      "id": "828305380815667240",
+      "serverId": "695779647618547799",
+      "interval": 1,
+      "updated_at": 1617759638454
+    },
+    {
+      "id": "823240014958821496",
+      "serverId": "695779647618547799",
+      "interval": 1,
+      "updated_at": 1617759603968
+    }
+  ]
 }

@@ -62,3 +62,9 @@ describe(`Command ${enumCommands.clean}`, () => {
     expect(fetchSpy).toBeCalledWith(textChannelId);
   })
 });
+
+describe(`Cleaning text channels`, () => {
+  it('should be call _schedule methods', () => {});
+  it('should be call _clearChannel methods', () => {});
+  it('should be call _updateScheduleChannels methods', () => {});
+});

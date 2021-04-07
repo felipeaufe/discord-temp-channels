@@ -5,7 +5,7 @@ import { BaseModel } from "./base.model";
 export interface ICleanChannel {
   id: string;
   interval: number;
-  updated_at: string | undefined | null;
+  updated_at: number;
   serverId: string
 }
 

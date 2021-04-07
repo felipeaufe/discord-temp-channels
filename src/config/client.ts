@@ -3,6 +3,7 @@ import { prefix } from "../environments/config";
 import { getCommandList } from '../utils/commands'
 import { IClient } from '../interfaces/client.interface'
 import { enumCommands } from '../enums/commands.enum';
+import { Clean }  from '../commands/clean';
 
 // PERMISSIONS INTEGER: 66206738
 // Personality: https://discord.com/api/oauth2/authorize?client_id=823327258906722304&permissions=66206720&scope=bot
@@ -25,6 +26,7 @@ client.once('ready', () => {
 	console.log('======================\n');
   client.user?.setActivity('@cattea', { type: 'LISTENING' })
 
+  Clean.schedule(client);
 });
 
 

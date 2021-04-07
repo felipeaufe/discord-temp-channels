@@ -3,8 +3,11 @@ import { enumCommands } from '../../enums/commands.enum';
 import { enumDiscordAPIError } from '../../enums/errors.enum';
 import { prefix, color, timeout } from '../../environments/config';
 import { Info } from '../../utils/info.messages';
-import { db } from '../../models'
+import { db, ICleanChannel } from '../../models'
 
+interface ICleanTextChannel extends ICleanChannel {
+  channel?: Discord.TextChannel;
+}
 export class Clean {
   /**
    * Command trigger
@@ -22,10 +25,20 @@ export class Clean {
   private _message: Discord.Message | undefined;
 
   /**
+   * Loaded text channels
+   */
+  private static _channels: Array<ICleanTextChannel> = [];
+
+  /**
    * default Interval in minutes
    */
   private _interval = 60;
 
+  /**
+   * Constructor
+   * 
+   * @param _client Discord.Client
+   */
   constructor(private _client: Discord.Client){};
 
   /**
@@ -49,6 +62,74 @@ export class Clean {
     message.delete({ timeout });
   }
 
+  /**
+   * Every minute check if some channel need to be cleaned
+   * 
+   * @param client: Discord.Client
+   */
+  public static schedule(client: Discord.Client) {
+    setInterval (async () => {
+      try {
+        this._updateScheduleChannels(client);
+
+        this._channels = this._channels.map((item: ICleanTextChannel) => {
+      
+          // Update next data;
+          if(item.updated_at < new Date().getTime()) {
+            const newDate = new Date(item.updated_at + (item.interval * 60000));
+            item.updated_at = newDate.getTime();
+
+            this._clearChannel(item);
+
+            // Update db
+            db.cleanChannel.update(item.id, {
+              "id": item.id,
+              "serverId": item.serverId,
+              "interval": item.interval,
+              "updated_at": item.updated_at
+            } as ICleanChannel);
+          }
+
+          return item;
+        });
+      } catch (error) {
+        console.error(error);
+      }
+    }, 1 * 60000); 
+  }
+
+  /**
+   * Clear text channel
+   * 
+   * @param item ICleanTextChannel
+   */
+  private static async _clearChannel(item: ICleanTextChannel){
+    const messages = await item.channel?.messages.fetch({ limit: 100});
+    if(messages) {
+      item.channel?.bulkDelete(messages);
+    }
+  }
+
+  /**
+   * Check if has a new text channel to be clear;
+   * 
+   * @param client Discord.Client
+   */
+  private static _updateScheduleChannels(client: Discord.Client){
+    
+    const channels: Array<ICleanChannel> = (db.cleanChannel.list() || []) as Array<ICleanChannel>;
+    const channelsId: Array<string> = this._channels.map((item: ICleanTextChannel) => item.id);
+
+    channels.forEach( async (item: ICleanChannel) => {
+      if(!channelsId.includes(item.id)){
+
+        const channel: Discord.TextChannel = await client.channels.fetch(item.id) as Discord.TextChannel
+        if(channel) {
+          this._channels.push({ ...item, channel });
+        }
+      }
+    });
+  }
 
  /**
   * Print the clean step-by-step to create a cleaning channel schedule
@@ -85,7 +166,6 @@ export class Clean {
     .setFooter(`${author.username}`, `${author.avatarURL()}`);
   }
 
-
   /**
    * Create a new clean channel based on id and interval
    * this channel will be cleaning every time set in interval
@@ -107,7 +187,7 @@ export class Clean {
           id: channel.id,
           serverId: this._message?.guild?.id || '',
           interval,
-          updated_at: null
+          updated_at: new Date().getTime()
         });
 
         Info.success(this._message);
